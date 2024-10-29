@@ -19,7 +19,7 @@ export default auth((req) => {
 
     if (isApiAuthRoute) {
         // return new Response(null, { status: 200 })
-        return null
+        return undefined
     }
 
     if (isPublicRoute){
@@ -32,14 +32,14 @@ export default auth((req) => {
         if (isLoggedIn) {
             return Response.redirect(new URL(DEFAULT_LOGIN_REDIRECT, nextUrl))
         }
-        return null
+        return undefined
     }
 
     if (!isLoggedIn && !isPublicRoute) {
         return Response.redirect(new URL("/auth/login", nextUrl))
     }
 
-    return null
+    return undefined
 
 })
 
