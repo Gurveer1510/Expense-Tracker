@@ -23,26 +23,28 @@ model User {
   accounts      Account[]
   createdAt     DateTime      @default(now())
   updatedAt     DateTime      @updatedAt
-  transactions  Transaction[]
-  balance       Balance?
+  budgets        Budget[]
 }
 
-model Balance {
-  id      String @id @default(cuid())
-  userId  String @unique
-  balance Float
-  user    User   @relation(fields: [userId], references: [id], onDelete: Cascade)
-}
 
-model Transaction {
-  id       String   @id @default(cuid())
-  amount   Float
-  category String
-  type     String // "expense" or "income"
-  date     DateTime @default(now())
+model Budget {
+  id       Int       @id @default(autoincrement())
+  name     String
   userId   String
-  user     User     @relation(fields: [userId], references: [id])
+  amount   Float
+  user     User      @relation(fields: [userId], references: [id])
+  expenses Expense[]
 }
+
+model Expense {
+  id         Int       @id @default(autoincrement())
+  description String
+  amount     Float
+  date       DateTime  @default(now())
+  budget     Budget    @relation(fields: [budgetId], references: [id])
+  budgetId   Int
+}
+
 
 model Account {
   userId            String
