@@ -25,10 +25,10 @@ const Main = () => {
                         </div>
                         <div className="px-3 text-center">
                             <div>
-                                "Track your spending, grow your savings.
+                                &quot;Track your spending, grow your savings.
                             </div>
                             <div>
-                                Your financial journey starts here."
+                                Your financial journey starts here.&quot;
                             </div>
                         </div>
                     </div>
