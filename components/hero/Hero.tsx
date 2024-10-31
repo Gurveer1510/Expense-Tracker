@@ -5,7 +5,7 @@ import Main from '@/components/hero/Main'
 
 const Hero = () => {
     return (
-        <div className='flex flex-col h-full'>
+        <div className='flex flex-col h-screen overflow-hidden'>
             <div>
                 <Navbar />
             </div>

@@ -19,7 +19,7 @@ const Navbar = () => {
                 <Button
                     asChild
                     variant={'outline'}
-                    className='py-6 text-lg text-slate-700 lg:font-semibold '
+                    className='p-2 sm:py-6 text-sm sm:text-lg text-slate-700 lg:font-semibold '
                     size={"sm"}
                 >
                     <Link href={"/auth/login"}>

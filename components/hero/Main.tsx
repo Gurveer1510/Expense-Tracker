@@ -36,8 +36,24 @@ const Main = () => {
                     <Button
                         asChild
                         variant={"secondary"}
+                        size={"sm"}
+                        className="w-fit sm:hidden mx-auto sm:w-52"
+                    >
+                        <Link href="/auth/login">
+                            <div className="flex items-center gap-2 cursor-pointer ">
+                                <p className=" lg:text-xl text-sm font-bold ">Dashboard</p>
+                                <ArrowRight className="text-black" size={20} />
+                            </div>
+                        </Link>
+
+                    </Button>
+
+
+                    <Button
+                        asChild
+                        variant={"secondary"}
                         size={"lg"}
-                        className="w-fit mx-auto sm:w-52"
+                        className="w-fit invisible sm:visible mx-auto sm:w-52"
                     >
                         <Link href="/auth/login">
                             <div className="flex items-center gap-2 cursor-pointer ">
