@@ -8,7 +8,6 @@ import {
     CardFooter
 } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
-import useNeonColorGenerator from "@/lib/useColorGenerator"
 import { BudgetCardType } from "@/types"
 
 const BudgetCardWrapper: React.FC<BudgetCardType> = ({
@@ -16,8 +15,6 @@ const BudgetCardWrapper: React.FC<BudgetCardType> = ({
     name,
     amount
 }) => {
-
-    const generateColor = useNeonColorGenerator()
 
     return (
         <Link
