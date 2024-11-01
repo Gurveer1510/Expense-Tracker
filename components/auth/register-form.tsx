@@ -16,8 +16,8 @@ import { RegisterSchema } from "@/schemas"
 import { Input } from "../ui/input"
 import { Button } from "../ui/button"
 import { useForm } from "react-hook-form"
-import { FormSuccess } from "../form-success"
-import { FormError } from "../form-error"
+import { FormSuccess } from "../form/form-success"
+import { FormError } from "../form/form-error"
 import { register } from "@/actions/register"
 
 

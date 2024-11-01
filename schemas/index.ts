@@ -20,3 +20,13 @@ export const RegisterSchema = z.object({
         message: "Password must have at least 6 characters"
     })
 })
+
+export const BudgetCardSchema = z.object({
+    id: z.string(),
+    name: z.string({
+        message: "Budget name is required"
+    }),
+    amount: z.number({
+        message: "Amount can't be empty."
+    })
+})

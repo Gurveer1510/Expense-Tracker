@@ -17,8 +17,8 @@ import { Input } from "../ui/input"
 import { Button } from "../ui/button"
 import { useForm } from "react-hook-form"
 import { login } from "@/actions/login"
-import { FormSuccess } from "../form-success"
-import { FormError } from "../form-error"
+import { FormSuccess } from "../form/form-success"
+import { FormError } from "../form/form-error"
 
 
 export const LoginForm = () => {
